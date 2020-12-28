@@ -178,7 +178,7 @@ export default class TextFit extends React.Component {
                 mid = Math.max(mid, 0);
 
                 if (shouldCancelProcess()) return stepCallback(true);
-                this.setState({ fontSize: mid }, stepCallback);
+                this.setState({ fontSize: mid}, stepCallback);
             }
         ], err => {
             // err will be true, if another process was triggered
@@ -207,7 +207,7 @@ export default class TextFit extends React.Component {
         const { fontSize, ready } = this.state;
         const finalStyle = {
             ...style,
-            fontSize: fontSize
+            fontSize: fontSize + 'rem'
         };
 
         const wrapperStyle = {
